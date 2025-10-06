@@ -1,0 +1,18 @@
+#Logs and Backups
+*.log
+*.gz
+*.bak
+/private_keys/
+*.pem
+
+#Editor
+.vscode/
+.idea/
+*.swp
+
+#System
+.vagrant/
+
+#Os artifacts
+.DS_Store
+Thumbs.db

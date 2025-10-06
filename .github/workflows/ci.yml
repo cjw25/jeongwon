@@ -1,0 +1,28 @@
+name: CI - ShellCheck & CodeQL
+
+on:
+ push:
+   branches: [ main ]
+ pull_request:
+   branches: [ main ]
+
+jobs:
+  shellcheck:
+    runs-oon: ubuntu-latest
+    steps:
+      -uses: actions/checkout@v4
+      -name: ShellCheck
+       uses: ludeeus/action-shellcheck@v1
+       with:
+         shellcheck_version: '0.9.0'
+         path: 'scripts/*.sh'
+
+codeql:
+  name: CodeQL Scan
+  runs-on: ubuntu-latest
+  steps:
+    -uses: action/checkout@v4
+    -uses: github/codeql-action/init@v2
+     with:
+       languages:
+    -uses: github/codeql-action/analyze@v2
