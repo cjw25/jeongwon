@@ -21,4 +21,4 @@ fi
 git add .
 git commit -m "Initial commit: Kali hardening templates"
 echo "Creating remote repo via gh..."
-gh repo create "$GITHUB_USER/$REPO_NAME" --$([ "$PRIVATE" = "true" ] && echo "private" || echo "public") --source=. --remote=origin --push
+gh repo create "$GITHUB_USER/$REPO_NAME" --"$([ "$PRIVATE" = "true" ] && echo "private" || echo "public")" --source=. --remote=origin --push

@@ -1,3 +1,4 @@
+#!/bin/bash
 mkdir -p ~/kali-hardening/scripts
 cat > ~/kali-hardening/scripts/kali_hardening.sh <<'EOF'
 #!/bin/bash
